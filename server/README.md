@@ -7,6 +7,6 @@
 
 ## Classes
 
-    - [x] Rote to create one classes;
+    - [X] Rote to create one classes;
     - [] Rote tp list all classes;
         - [] Filter by subject, day on week and time;
