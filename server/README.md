@@ -2,8 +2,8 @@
 
 ## Connections
 
-    - [] Rote to list all connections realized;
-    - [] Rote to create a new connection;
+    - [x] Rote to list all connections realized;
+    - [x] Rote to create a new connection;
 
 ## Classes
 
