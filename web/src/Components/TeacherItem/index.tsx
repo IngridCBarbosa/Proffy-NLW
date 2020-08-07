@@ -1,33 +1,59 @@
-import React from 'react';
+import React, { FC } from 'react';
 
 import whatsappIcon from '../../assets/images/icons/whatsapp.svg';
 import './styles.css';
+import api from '../../services/api';
 
-function TeacherItem() {
+export interface Teacher {
+
+    avatar: string;
+    bio: string;
+    cost: number;
+    id: number;
+    name: string;
+    subject: string;
+    whatsapp: string;
+
+}
+
+interface TeacherItemProps {
+    teacher: Teacher
+}
+
+const TeacherItem: FC<TeacherItemProps> = ({ teacher }) => {
+
+
+    function createNewConnection() {
+        api.post('connections', {
+            user_id: teacher.id,
+        })
+    }
+
+
     return (
         <article className="teacher-item">
             <header>
-                <img src="https://avatars2.githubusercontent.com/u/39519684?s=460&u=be93e91d68e8f51b22337010d273e6597a644151&v=4" alt="Ingrid Barbosa" />
+                <img src={teacher.avatar} alt={teacher.name} />
                 <div >
-                    <strong>Ingrid Barbosa</strong>
-                    <span>Música</span>
+                    <strong>{teacher.name}</strong>
+                    <span>{teacher.subject}</span>
                 </div>
             </header>
 
             <p>
-                Apaixonada por música, e para mudar a vida das pessoas através de experiências práticas.
-                    <br /><br />
-                    Mais de 200.000 pessoas assistiram meus concertos.
-                </p>
+                {teacher.bio}
+            </p>
             <footer>
                 <p>
                     Preço/hora
-                            <strong>R$ 80,00</strong>
+                    <strong>R$ {teacher.cost}</strong>
                 </p>
-                <button type="button">
+
+                <a target="blank" onClick={createNewConnection} href={`https://wa.me/${teacher.whatsapp}`}>
                     <img src={whatsappIcon} alt="Whatsapp" />
                             Entrar em contato
-                        </button>
+                </a>
+
             </footer>
         </article>
     );
