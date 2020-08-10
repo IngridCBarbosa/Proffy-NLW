@@ -4,7 +4,7 @@ import { View, Image, Text, TouchableOpacity } from 'react-native';
 import styles from './styles';
 import landingImage from '../../assets/images/landing.png';
 import studyIcon from '../../assets/images/icons/study.png';
-import giveClasesIcon from '../../assets/images/icons/give-classes.png';
+import giveClassesIcon from '../../assets/images/icons/give-classes.png';
 import heartIcon from '../../assets/images/icons/heart.png';
 
 function Landing() {
@@ -23,7 +23,7 @@ function Landing() {
                 </TouchableOpacity>
                 
                 <TouchableOpacity style={[styles.button, styles.buttonSecondary]}>
-                    <Image source={giveClasesIcon} />
+                    <Image source={giveClassesIcon} />
                     <Text style={styles.buttonText}>Dar aulas</Text>
                 </TouchableOpacity>
 
