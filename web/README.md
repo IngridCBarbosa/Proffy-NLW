@@ -17,5 +17,5 @@
 
 ## Screams
 
-![](/src/images/gif/proffy1.gif)
-![](/src/images/gif/proffy2.gif)
+![](/src/assets/gif/proffy1.gif)
+![](/src/assets/gif/proffy2.gif)
