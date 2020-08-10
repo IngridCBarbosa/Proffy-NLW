@@ -17,5 +17,5 @@
 
 ## Screams
 
-![Give classes](/src/assets/gif/proffy1.gif)
-![Study](/src/assets/gif/proffy2.gif)
+![Give classes](/src/assetsproffy1.gif)
+![Study](/src/assets/proffy2.gif)
