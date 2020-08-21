@@ -18,6 +18,10 @@ function Landing() {
         navigate('GiveClasses');
     }
 
+    function handleNavigateToStudy(){
+        navigate('Study')
+    }
+
     return (
         <View style={styles.container}>
             <Image source={landingImage} style={styles.banner}/>
@@ -27,7 +31,7 @@ function Landing() {
             </Text>
             <View style={styles.buttonContainer}>
                 
-                <RectButton style={[styles.button, styles.buttonPrimary]}>
+                <RectButton onPress={handleNavigateToStudy} style={[styles.button, styles.buttonPrimary]}>
                     <Image source={studyIcon} />
                     <Text style={styles.buttonText}>Estudar</Text>
                 </RectButton>
